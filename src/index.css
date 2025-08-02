@@ -1,0 +1,525 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CivicTrack Design System - Premium Civic Platform
+Modern, trust-inspiring, cinematic design system for civic engagement
+*/
+
+@layer base {
+  :root {
+    /* CivicTrack Official Color Palette */
+    --background: 214 100% 98%;        /* Light powder blue background */
+    --foreground: 229 47% 15%;         /* Royal blue text */
+
+    /* Card System with Bone accents */
+    --card: 41 77% 94%;                /* Bone for cards */
+    --card-foreground: 229 47% 15%;    /* Royal blue text on cards */
+
+    /* Interactive Elements */
+    --popover: 41 77% 94%;             /* Bone for popovers */
+    --popover-foreground: 229 47% 15%; /* Royal blue text */
+
+    /* Royal Blue - Primary Brand */
+    --primary: 229 47% 20%;            /* #162660 Royal Blue */
+    --primary-foreground: 0 0% 100%;   /* White text on royal */
+    --primary-glow: 229 60% 35%;       /* Lighter royal for glow */
+    --primary-variant: 229 65% 12%;    /* Darker royal variant */
+    --royal: 229 47% 20%;              /* Royal Blue alias */
+    --powder: 214 100% 90%;            /* Powder Blue alias */
+    --bone: 41 77% 90%;                /* Bone alias */
+
+    /* Powder Blue - Secondary */
+    --secondary: 214 100% 90%;         /* #D0E6FD Powder Blue */
+    --secondary-foreground: 229 47% 20%; /* Royal text on powder */
+    --secondary-variant: 214 100% 82%; /* Darker powder variant */
+
+    /* Bone - Neutral */
+    --accent: 41 77% 90%;              /* #F1E4D1 Bone */
+    --accent-foreground: 229 47% 20%;  /* Royal text on bone */
+    --accent-variant: 41 77% 85%;      /* Darker bone variant */
+
+    /* Professional Muted using Powder Blue tints */
+    --muted: 214 100% 95%;
+    --muted-foreground: 229 47% 45%;
+
+    /* Status Colors enhanced with brand colors */
+    --status-reported: 31 95% 55%;     /* Amber - New Issue */
+    --status-verified: 229 47% 20%;    /* Royal Blue - Verified */
+    --status-progress: 45 93% 50%;     /* Yellow - In Progress */
+    --status-resolved: 158 64% 52%;    /* Green - Resolved */
+
+    /* Alert & Warning System */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 45 93% 50%;
+    --success: 158 64% 52%;
+
+    /* Interface Elements using brand colors */
+    --border: 214 100% 85%;            /* Powder blue borders */
+    --input: 41 77% 96%;               /* Light bone inputs */
+    --ring: 229 47% 20%;               /* Royal blue focus rings */
+
+    /* Glassmorphism with brand colors */
+    --glass-bg: 214 100% 98% / 0.85;
+    --glass-border: 214 100% 85% / 0.4;
+    --glass-shadow: 229 47% 15% / 0.1;
+    
+    /* Brand-aligned Gradients */
+    --gradient-civic: linear-gradient(135deg, #162660, #4c9aff);
+    --gradient-hero: linear-gradient(135deg, #162660 0%, #D0E6FD 35%, #F1E4D1 100%);
+    --gradient-card: linear-gradient(145deg, rgba(241, 228, 209, 0.8), rgba(208, 230, 253, 0.6));
+    --gradient-button: linear-gradient(135deg, #162660, #1e4bbd, #4c9aff);
+    --gradient-status: linear-gradient(90deg, #66BB6A, #D0E6FD);
+    --gradient-map: linear-gradient(180deg, rgba(22, 38, 96, 0.1), rgba(208, 230, 253, 0.1));
+    
+    /* Premium Shadows with brand colors */
+    --shadow-sm: 0 2px 8px -2px rgba(22, 38, 96, 0.08);
+    --shadow-md: 0 4px 20px -4px rgba(22, 38, 96, 0.12);
+    --shadow-lg: 0 8px 40px -8px rgba(22, 38, 96, 0.16);
+    --shadow-civic: 0 4px 24px -4px rgba(22, 38, 96, 0.25);
+    --shadow-glow: 0 0 40px rgba(22, 38, 96, 0.35);
+    --shadow-float: 0 8px 30px -8px rgba(22, 38, 96, 0.2);
+
+    /* Auth Specific Variables */
+    --auth-bg: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--secondary)) 100%);
+    --auth-card-bg: rgba(255, 255, 255, 0.95);
+    --auth-input-bg: rgba(255, 255, 255, 0.8);
+    --auth-glass-border: rgba(255, 255, 255, 0.2);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 1rem;
+
+    /* Sidebar Variables */
+    --sidebar-background: 220 25% 99%;
+    --sidebar-foreground: 220 30% 15%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 30% 98%;
+    --sidebar-accent: 220 20% 95%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* Dark Mode Civic Colors */
+    --background: 220 30% 8%;
+    --foreground: 220 30% 95%;
+
+    /* Dark Mode Cards */
+    --card: 220 25% 10%;
+    --card-foreground: 220 30% 95%;
+
+    /* Dark Mode Interactive Elements */
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 30% 95%;
+
+    /* Dark Mode Primary */
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 30% 8%;
+    --primary-glow: 217 91% 75%;
+    --primary-variant: 217 91% 50%;
+
+    /* Dark Mode Secondary */
+    --secondary: 158 64% 60%;
+    --secondary-foreground: 220 30% 8%;
+    --secondary-variant: 158 64% 45%;
+
+    /* Dark Mode Accent */
+    --accent: 194 95% 75%;
+    --accent-foreground: 220 30% 8%;
+    --accent-variant: 194 95% 60%;
+
+    /* Dark Mode Muted */
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    /* Dark Mode Status Colors */
+    --status-reported: 31 95% 65%;
+    --status-verified: 217 91% 65%;
+    --status-progress: 45 93% 60%;
+    --status-resolved: 158 64% 60%;
+
+    /* Dark Mode Alerts */
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 220 30% 95%;
+    --warning: 45 93% 60%;
+    --success: 158 64% 60%;
+
+    /* Dark Mode Interface */
+    --border: 220 20% 20%;
+    --input: 220 20% 15%;
+    --ring: 217 91% 65%;
+
+    /* Dark Mode Glassmorphism */
+    --glass-bg: 220 30% 8% / 0.9;
+    --glass-border: 220 20% 20% / 0.5;
+    --glass-shadow: 220 30% 95% / 0.05;
+
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(220 30% 8% / 0.3);
+    --shadow-md: 0 4px 20px -4px hsl(220 30% 8% / 0.4);
+    --shadow-lg: 0 8px 40px -8px hsl(220 30% 8% / 0.5);
+    --shadow-civic: 0 4px 24px -4px hsl(217 91% 65% / 0.3);
+    --shadow-glow: 0 0 40px hsl(217 91% 75% / 0.4);
+    --shadow-float: 0 8px 30px -8px hsl(220 30% 8% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Scroll Behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* CivicTrack Premium Components */
+  
+  /* Glassmorphism Cards */
+  .glass-card {
+    @apply backdrop-blur-xl border border-powder/40 rounded-3xl;
+    background: var(--gradient-card);
+    box-shadow: 0 8px 32px -8px rgba(22, 38, 96, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-float {
+    @apply glass-card hover:scale-[1.02] transition-all duration-300;
+    box-shadow: 0 12px 40px -12px rgba(22, 38, 96, 0.25);
+  }
+
+  /* CivicTrack Signature Buttons */
+  .btn-civic {
+    @apply bg-royal text-white rounded-2xl px-6 py-3 font-semibold;
+    @apply hover:bg-royal/90 transition-all duration-300;
+    @apply shadow-royal hover:shadow-glow hover:-translate-y-1;
+  }
+
+  .btn-powder {
+    @apply bg-powder text-royal rounded-2xl px-6 py-3 font-semibold;
+    @apply hover:bg-powder/80 transition-all duration-300;
+    @apply shadow-powder hover:shadow-lg;
+  }
+
+  .btn-bone {
+    @apply bg-bone text-royal rounded-2xl px-6 py-3 font-semibold;
+    @apply hover:bg-bone/90 transition-all duration-300;
+    @apply shadow-bone hover:shadow-md;
+  }
+
+  /* Enhanced Map Markers */
+  .marker-royal {
+    @apply bg-royal text-white rounded-full p-2 shadow-royal;
+    animation: marker-pulse 3s ease-in-out infinite;
+  }
+
+  .marker-pulse {
+    animation: marker-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .marker-glow {
+    filter: drop-shadow(0 0 12px rgba(22, 38, 96, 0.6));
+  }
+
+  /* Status Badges */
+  .status-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .status-reported {
+    @apply bg-orange-100 text-orange-800 border border-orange-200;
+  }
+
+  .status-verified {
+    @apply bg-royal/10 text-royal border border-royal/20;
+  }
+
+  .status-progress {
+    @apply bg-yellow-100 text-yellow-800 border border-yellow-200;
+  }
+
+  .status-resolved {
+    @apply bg-green-100 text-green-800 border border-green-200;
+  }
+
+  /* Loading States */
+  .skeleton {
+    @apply animate-pulse bg-powder/50 rounded-2xl;
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(22, 38, 96, 0.04), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* Civic Grid System */
+  .civic-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  .civic-grid-sm {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Card Variations */
+  .card-royal {
+    @apply bg-royal text-white rounded-2xl p-6 shadow-royal;
+  }
+
+  .card-powder {
+    @apply bg-powder text-royal rounded-2xl p-6 shadow-powder;
+  }
+
+  .card-bone {
+    @apply bg-bone text-royal rounded-2xl p-6 shadow-bone;
+  }
+
+  /* Interactive Elements */
+  .interactive-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .interactive-press {
+    @apply transition-all duration-150 active:scale-95;
+  }
+
+  .ghost-hover {
+    @apply hover:scale-105;
+    background: var(--gradient-card);
+  }
+
+  /* Form Elements */
+  .input-civic {
+    @apply border-powder/40 rounded-2xl px-6 py-4 text-royal placeholder:text-royal/50;
+    @apply focus:border-royal focus:ring-2 focus:ring-royal/20 focus:scale-105;
+    @apply transition-all duration-300 shadow-sm hover:shadow-md;
+    background: var(--gradient-card);
+  }
+
+  .textarea-civic {
+    @apply border-powder/40 rounded-2xl px-6 py-4 text-royal placeholder:text-royal/50;
+    @apply focus:border-royal focus:ring-2 focus:ring-royal/20 focus:scale-105;
+    @apply transition-all duration-300 min-h-[140px] shadow-sm hover:shadow-md;
+    background: var(--gradient-card);
+  }
+
+  /* Progress Indicators */
+  .progress-step {
+    @apply h-2 rounded-full transition-all duration-500;
+  }
+
+  .progress-active {
+    @apply bg-royal shadow-glow;
+  }
+
+  .progress-inactive {
+    @apply bg-powder;
+  }
+
+  /* Mobile Optimizations */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Gamification Elements */
+  .leaderboard-rank {
+    @apply bg-royal text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm;
+  }
+
+  .achievement-badge {
+    @apply bg-gradient-to-r from-royal to-powder rounded-full p-2 shadow-glow;
+  }
+
+  /* Micro-interactions */
+  .pulse-royal {
+    animation: pulse-royal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-royal {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(22, 38, 96, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(22, 38, 96, 0);
+    }
+  }
+
+  /* Enhanced Glassmorphism Effects */
+  .glass-enhanced {
+    @apply backdrop-blur-3xl border border-white/20 shadow-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  }
+
+  /* Animated Gradient Text */
+  .gradient-text {
+    background: linear-gradient(45deg, #162660, #D0E6FD, #F1E4D1, #162660);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Enhanced Button Hover Effects */
+  .btn-enhanced {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-enhanced:hover::before {
+    left: 100%;
+  }
+
+  /* Floating Elements */
+  .float-animation {
+    animation: float-smooth 6s ease-in-out infinite;
+  }
+
+  @keyframes float-smooth {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-20px) rotate(1deg); }
+    66% { transform: translateY(-10px) rotate(-1deg); }
+  }
+
+  /* Smart Loading States */
+  .loading-dots::after {
+    content: '';
+    animation: loading-dots 1.5s infinite;
+  }
+
+  @keyframes loading-dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Enhanced Civic Animations */
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes civic-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes marker-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-civic-pulse {
+    animation: civic-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-marker-pulse {
+    animation: marker-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
