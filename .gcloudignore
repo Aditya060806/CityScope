@@ -1,0 +1,34 @@
+# Controls what `gcloud run deploy --source` uploads to Cloud Build.
+# IMPORTANT: this file REPLACES .gitignore for upload filtering.
+# We intentionally do NOT ignore .env / .env.local so Vite can bake the
+# VITE_* client config into the bundle during the in-container build.
+
+# Heavy / rebuilt-in-container
+node_modules/
+dist/
+build/
+
+# Version control & local tooling
+.git/
+.github/
+.vscode/
+.idea/
+.vite/
+
+# Android binary (forbidden anyway, not needed for web)
+*.apk
+*.exe
+
+# Docs & SQL scripts (not needed to build/serve the app)
+*.md
+*.sql
+supabase_migrations/
+
+# Logs / OS cruft
+*.log
+.DS_Store
+Thumbs.db
+
+# Keep the Firebase config out of the Cloud Run image
+.firebaserc
+firebase.json

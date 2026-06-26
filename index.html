@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0B1121" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>CityScope - Fix Your Block. Report. Resolve. Rise.</title>
+  <meta name="description"
+    content="Your voice just made your block better 💪 Report civic issues instantly, track real-time progress, and build stronger communities through hyperlocal engagement." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/CityScope-bg.png" />
+  <link rel="shortcut icon" type="image/png" href="/CityScope-bg.png" />
+
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Leaflet styles are bundled locally via component imports to avoid CDN/tracking issues. -->
+
+  <meta property="og:title" content="CityScope - Fix Your Block" />
+  <meta property="og:description" content="Your voice just made your block better 💪" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/CityScope.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@cityscope" />
+  <meta name="twitter:image" content="/CityScope.png" />
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- Suppress MetaMask SES lockdown errors (extension-injected, not app code) -->
+  <script>
+    window.addEventListener('error', function (e) {
+      if (
+        (e.message && e.message.indexOf('SES_UNCAUGHT_EXCEPTION') !== -1) ||
+        (e.filename && e.filename.indexOf('lockdown-install') !== -1)
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+  <script type="module" src="/src/main.tsx"></script>
+
+</body>
+
+</html>
