@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="socialGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C2185B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFCDD2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F8BBD9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#socialGradient)" stroke="#880E4F" stroke-width="2"/>
+  
+  <!-- Heart -->
+  <path d="M32 20 C28 16, 20 16, 20 24 C20 28, 24 32, 32 40 C40 32, 44 28, 44 24 C44 16, 36 16, 32 20 Z" fill="url(#heartGradient)" stroke="#AD1457" stroke-width="2"/>
+  
+  <!-- Hands helping -->
+  <path d="M16 36 Q12 32, 16 28 Q20 32, 16 36" fill="#FFAB91" stroke="#D84315" stroke-width="2"/>
+  <path d="M48 36 Q44 32, 48 28 Q52 32, 48 36" fill="#FFAB91" stroke="#D84315" stroke-width="2"/>
+  
+  <!-- Community people -->
+  <circle cx="24" cy="44" r="3" fill="#FFAB91" stroke="#D84315" stroke-width="1"/>
+  <circle cx="32" cy="44" r="3" fill="#FFAB91" stroke="#D84315" stroke-width="1"/>
+  <circle cx="40" cy="44" r="3" fill="#FFAB91" stroke="#D84315" stroke-width="1"/>
+  
+  <!-- Connection lines -->
+  <line x1="24" y1="44" x2="32" y2="44" stroke="#FFAB91" stroke-width="2"/>
+  <line x1="32" y1="44" x2="40" y2="44" stroke="#FFAB91" stroke-width="2"/>
+  
+  <!-- Impact waves -->
+  <circle cx="32" cy="32" r="8" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.6"/>
+  <circle cx="32" cy="32" r="12" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.4"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Social Impact Text -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#C2185B" text-anchor="middle">SOCIAL IMPACT</text>
+</svg>

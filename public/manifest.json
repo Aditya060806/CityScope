@@ -1,0 +1,149 @@
+{
+  "name": "CityScope - Civic Issue Reporting",
+  "short_name": "CityScope",
+  "description": "Advanced Civic Issue Reporting System with AI-powered categorization, real-time tracking, UPI rewards, and community engagement features.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["government", "utilities", "productivity", "social"],
+  "icons": [
+    {
+      "src": "/CityScope.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/CityScope.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/CityScope-bg.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/CityScope-bg.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/mobile-dashboard.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Dashboard View"
+    },
+    {
+      "src": "/screenshots/desktop-map.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop Map View"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Report Issue",
+      "short_name": "Report",
+      "description": "Quickly report a new civic issue",
+      "url": "/report",
+      "icons": [
+        {
+          "src": "/icons/report.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "View Map",
+      "short_name": "Map",
+      "description": "View issues on the interactive map",
+      "url": "/?tab=map",
+      "icons": [
+        {
+          "src": "/icons/map.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Rewards Center",
+      "short_name": "Rewards",
+      "description": "Check your civic engagement rewards and UPI payments",
+      "url": "/?tab=rewards",
+      "icons": [
+        {
+          "src": "/CityScope.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "capture_links": "new-client",
+  "file_handlers": [
+    {
+      "action": "/upload",
+      "accept": {
+        "image/*": [".jpg", ".jpeg", ".png", ".webp", ".gif"],
+        "audio/*": [".mp3", ".wav", ".m4a", ".webm"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+cityscope",
+      "url": "/?issue=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "images",
+          "accept": ["image/*"]
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "geolocation",
+    "notifications",
+    "camera",
+    "microphone"
+  ],
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple"
+  ]
+}

@@ -1,0 +1,36 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="accessGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1976D2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="keyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFC107;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8F00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#accessGradient)" stroke="#0D47A1" stroke-width="2"/>
+  
+  <!-- Key -->
+  <path d="M20 28 L24 24 L28 28 L32 24 L36 28 L40 24 L44 28 L48 24 L48 32 L44 36 L40 32 L36 36 L32 32 L28 36 L24 32 L20 28 Z" fill="url(#keyGradient)" stroke="#E65100" stroke-width="2"/>
+  
+  <!-- Key hole -->
+  <circle cx="32" cy="28" r="4" fill="#1976D2"/>
+  <rect x="30" y="28" width="4" height="8" fill="#1976D2"/>
+  
+  <!-- Lock -->
+  <rect x="28" y="36" width="8" height="6" rx="2" fill="#FFC107" stroke="#E65100" stroke-width="2"/>
+  <rect x="30" y="32" width="4" height="6" fill="#FFC107" stroke="#E65100" stroke-width="1"/>
+  
+  <!-- Access granted checkmark -->
+  <path d="M16 20 L20 24 L28 16" stroke="#4CAF50" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Security shield -->
+  <path d="M32 12 L40 16 L40 24 L32 28 L24 24 L24 16 Z" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <path d="M28 20 L30 22 L36 16" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Access Text -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1976D2" text-anchor="middle">ACCESS</text>
+</svg>

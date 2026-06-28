@@ -1,0 +1,8 @@
+-- LEGACY FILE
+-- Do not run this file anymore.
+--
+-- Replaced by:
+--   supabase_migrations/2026-03-25_flutter_parity_consolidated.sql
+--
+-- Reason:
+--   This legacy script can conflict with consolidated migration policy/table logic.

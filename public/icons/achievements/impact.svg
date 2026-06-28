@@ -1,0 +1,39 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="impactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00BCD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0097A7;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="waveGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E0F2F1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#B2DFDB;stop-opacity:0.4" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#impactGradient)" stroke="#00695C" stroke-width="2"/>
+  
+  <!-- Impact waves -->
+  <circle cx="32" cy="32" r="8" fill="url(#waveGradient)"/>
+  <circle cx="32" cy="32" r="12" fill="none" stroke="#E0F2F1" stroke-width="2" opacity="0.8"/>
+  <circle cx="32" cy="32" r="16" fill="none" stroke="#E0F2F1" stroke-width="2" opacity="0.6"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#E0F2F1" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Central impact point -->
+  <circle cx="32" cy="32" r="4" fill="#FFD700" stroke="#F57F17" stroke-width="2"/>
+  
+  <!-- Impact arrows -->
+  <path d="M16 16 L20 20 M20 16 L16 20" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 16 L44 20 M44 16 L48 20" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 48 L20 44 M20 48 L16 44" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <path d="M48 48 L44 44 M44 48 L48 44" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Impact measurement lines -->
+  <line x1="12" y1="32" x2="20" y2="32" stroke="#FFD700" stroke-width="2"/>
+  <line x1="44" y1="32" x2="52" y2="32" stroke="#FFD700" stroke-width="2"/>
+  <line x1="32" y1="12" x2="32" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="32" y1="44" x2="32" y2="52" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Impact Text -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0097A7" text-anchor="middle">IMPACT</text>
+</svg>

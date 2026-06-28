@@ -1,0 +1,49 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="consistencyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="calendarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F5E8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C8E6C9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#consistencyGradient)" stroke="#1B5E20" stroke-width="2"/>
+  
+  <!-- Calendar -->
+  <rect x="20" y="16" width="24" height="20" rx="2" fill="url(#calendarGradient)" stroke="#2E7D32" stroke-width="2"/>
+  
+  <!-- Calendar header -->
+  <rect x="20" y="16" width="24" height="6" fill="#2E7D32"/>
+  <circle cx="26" y="19" r="1" fill="white"/>
+  <circle cx="30" y="19" r="1" fill="white"/>
+  <circle cx="34" y="19" r="1" fill="white"/>
+  <circle cx="38" y="19" r="1" fill="white"/>
+  
+  <!-- Calendar grid -->
+  <line x1="24" y1="22" x2="40" y2="22" stroke="#2E7D32" stroke-width="1"/>
+  <line x1="24" y1="26" x2="40" y2="26" stroke="#2E7D32" stroke-width="1"/>
+  <line x1="24" y1="30" x2="40" y2="30" stroke="#2E7D32" stroke-width="1"/>
+  <line x1="24" y1="34" x2="40" y2="34" stroke="#2E7D32" stroke-width="1"/>
+  
+  <!-- Checkmarks for consistency -->
+  <path d="M26 24 L28 26 L30 24" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M30 28 L32 30 L34 28" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M26 32 L28 34 L30 32" stroke="#4CAF50" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Streak counter -->
+  <rect x="28" y="40" width="8" height="6" rx="2" fill="#FFD700" stroke="#F57F17" stroke-width="1"/>
+  <text x="32" y="44" font-family="Arial, sans-serif" font-size="6" font-weight="bold" fill="#2E7D32" text-anchor="middle">7</text>
+  
+  <!-- Consistency dots -->
+  <circle cx="16" cy="20" r="2" fill="#4CAF50"/>
+  <circle cx="48" cy="20" r="2" fill="#4CAF50"/>
+  <circle cx="16" cy="44" r="2" fill="#4CAF50"/>
+  <circle cx="48" cy="44" r="2" fill="#4CAF50"/>
+  
+  <!-- Consistency Text -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#2E7D32" text-anchor="middle">CONSISTENCY</text>
+</svg>

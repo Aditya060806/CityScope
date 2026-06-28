@@ -1,0 +1,44 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="educationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F57C00;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE0B2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#educationGradient)" stroke="#E65100" stroke-width="2"/>
+  
+  <!-- Graduation cap -->
+  <path d="M16 24 L32 16 L48 24 L48 28 L32 20 L16 28 Z" fill="#2E7D32" stroke="#1B5E20" stroke-width="2"/>
+  <path d="M16 24 L32 16 L48 24" stroke="#4CAF50" stroke-width="1"/>
+  
+  <!-- Tassel -->
+  <line x1="48" y1="24" x2="52" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <circle cx="52" cy="20" r="2" fill="#FFD700"/>
+  
+  <!-- Book -->
+  <rect x="20" y="32" width="24" height="16" rx="2" fill="url(#bookGradient)" stroke="#D84315" stroke-width="2"/>
+  
+  <!-- Book pages -->
+  <line x1="24" y1="36" x2="40" y2="36" stroke="#D84315" stroke-width="1"/>
+  <line x1="24" y1="40" x2="40" y2="40" stroke="#D84315" stroke-width="1"/>
+  <line x1="24" y1="44" x2="40" y2="44" stroke="#D84315" stroke-width="1"/>
+  
+  <!-- Lightbulb (knowledge) -->
+  <circle cx="32" cy="12" r="4" fill="#FFD700" stroke="#F57F17" stroke-width="2"/>
+  <rect x="30" y="8" width="4" height="2" fill="#FFD700"/>
+  
+  <!-- Knowledge rays -->
+  <line x1="20" y1="8" x2="24" y2="12" stroke="#FFD700" stroke-width="2"/>
+  <line x1="44" y1="8" x2="40" y2="12" stroke="#FFD700" stroke-width="2"/>
+  <line x1="12" y1="20" x2="16" y2="24" stroke="#FFD700" stroke-width="2"/>
+  <line x1="52" y1="20" x2="48" y2="24" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Education Text -->
+  <text x="32" y="50" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#F57C00" text-anchor="middle">EDUCATION</text>
+</svg>
