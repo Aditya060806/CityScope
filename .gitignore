@@ -105,3 +105,6 @@ Thumbs.db
 # Test files
 test-*.js
 test-*.html
+
+# Firebase deploy cache
+.firebase/

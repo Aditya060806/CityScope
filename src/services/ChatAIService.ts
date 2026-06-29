@@ -1,6 +1,6 @@
 /**
  * ChatAIService — Real AI brain for the CityScope chatbot
- * Primary: Google Gemini (gemini-2.0-flash)
+ * Primary: Google Gemini (gemini-2.5-flash)
  * Fallback: Groq (llama-3.3-70b-versatile)
  */
 
@@ -10,10 +10,10 @@ const GEMINI_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 const GROQ_BASE = 'https://api.groq.com/openai/v1/chat/completions';
 
 const GEMINI_MODELS = [
-  'gemini-2.0-flash',
   'gemini-2.5-flash',
+  'gemini-2.5-flash-lite',
   'gemini-flash-latest',
-  'gemini-pro-latest',
+  'gemini-2.0-flash',
 ];
 
 export interface ChatContext {

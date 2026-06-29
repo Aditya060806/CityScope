@@ -201,7 +201,7 @@ class APITestService {
         },
         body: JSON.stringify({
           messages: [{ role: 'user', content: 'Hello' }],
-          model: 'mixtral-8x7b-32768',
+          model: 'llama-3.3-70b-versatile',
           max_tokens: 10
         })
       });
