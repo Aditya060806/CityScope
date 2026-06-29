@@ -1,0 +1,15 @@
+# Docker build context excludes — keep .env/.env.local so Vite reads them.
+node_modules
+dist
+build
+.git
+.github
+.vscode
+.idea
+.vite
+*.apk
+*.exe
+*.log
+.DS_Store
+Thumbs.db
+npm-debug.log*
